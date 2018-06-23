@@ -48,8 +48,15 @@ description: An overview of numbro, how to downland and use it, how to contribut
 
 		{% highlight bash %}~ $ npm install numbro{% endhighlight %}
 
-		{% highlight javascript %}var numbro = require("numbro");{% endhighlight %}
-
+		<p>
+			Usage with loading all languages:
+		</p>
+		
+		{% highlight javascript %}const numbro = require("numbro");{% endhighlight %}
+		{% highlight javascript %}const allLanguages = require('numbro/dist/languages.min');{% endhighlight %}
+		{% highlight javascript %}Object.values(allLanguages).forEach((data) => {{% endhighlight %}
+		{% highlight javascript %}  numbro.registerLanguage(data);{% endhighlight %}
+		{% highlight javascript %}});{% endhighlight %}
 
 		<p>
 			You should then include the Numbro javascript file in your webpage using a snippet like:
